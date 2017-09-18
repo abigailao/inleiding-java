@@ -1,8 +1,6 @@
 package h02;
 
-/*
-* Maak een applet in Java waarin je naam in het geel wordt afgedrukt op een blauw achtergrond.
- */
+// Opdracht 2.1: Maak een applet in Java waarin je naam in het geel wordt afgedrukt op een blauw achtergrond.
 
 import java.awt.*;
 import java.applet.*;
