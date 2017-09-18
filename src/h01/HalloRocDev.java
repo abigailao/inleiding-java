@@ -6,6 +6,6 @@ package h01;
 public class HalloRocDev {
 
     public static void main(String[] args) {
-        System.out.println("Nope.");
+        System.out.println("Wrong again!");
     }
 }
