@@ -1,5 +1,7 @@
 package h04;
 
+// Opdracht 4.1 Teken een gelijkbenige driehoek
+
 import java.awt.*;
 import java.applet.*;
 
