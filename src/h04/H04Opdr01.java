@@ -11,7 +11,6 @@ public class H04Opdr01 extends Applet {
 
     }
     public void paint(Graphics g) {
-        setBackground(Color.white);
         g.drawPolygon(new int[] {180, 200, 220},new int[] {160, 40, 160}, 3);
     }
 
