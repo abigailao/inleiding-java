@@ -4,44 +4,57 @@ package h05;
 maar nu zodanig dat als je het gewicht van de kinderen verandert de staven automatisch worden aangepast als je de Applet uitvoert.
  */
 
-import java.awt.*;
-import java.applet.*;
+        import java.awt.*;
+        import java.applet.*;
 
-public class H05Opdr02 extends Applet{
-
-Color gray;
-Color gray2;
-Color gray3;
-int width;
+public class H05Opdr02 extends Applet {
+    int width;
+    int kg100m;
+    int kg100p;
+    int nulpunt, Valerie2, Jeroen2, Hans2;
+    int Valerie;
+    int Jeroen;
+    int Hans;
 
     public void init() {
-        gray = Color.LIGHT_GRAY;
-        gray2 = Color.GRAY;
-        gray3 = Color.darkGray;
+        width = 50;
+        kg100m = 33;
+        kg100p = 26;
+        nulpunt = 270;
+        Valerie = 40;
+        Jeroen = 100;
+        Hans = 80;
+        Valerie2 = nulpunt - Valerie;
+        Jeroen2 = nulpunt - Jeroen;
+        Hans2 = nulpunt - Hans;
     }
+
     public void paint(Graphics g) {
-        g.fillRect(50,0,1,270);
-        g.fillRect(50,270,270,1);
+
+        g.drawLine(50,270,50,50);
+        g.drawLine (320,270,50,270);
         g.drawString("Valerie", 80, 285);
         g.drawString("Jeroen", 160, 285);
         g.drawString("Hans", 240, 285);
-        g.drawString("0",42,280);
-        g.drawString("20", 33, 250);
-        g.drawString("40", 33,220);
-        g.drawString("60",33,190);
-        g.drawString("80",33,160);
-        g.drawString("100",26,130);
-        g.drawString("120",26,100);
-        g.drawString("140",26,70);
-        g.drawString("160",26,40);
-        g.drawString("180",26,10);
-        g.setColor(gray);
-        g.fillRect(75,220,50,50);
-        g.setColor(gray2);
-        g.fillRect(150,130,50,140);
-        g.setColor(gray3);
-        g.fillRect(230,160,50,110);
-    }
 
+        g.setColor(Color.lightGray);
+        g.fillRect(75,Valerie2,width,Valerie);
+        g.setColor(Color.gray);
+        g.fillRect(150,Jeroen2,width,Jeroen);
+        g.setColor(Color.DARK_GRAY);
+        g.fillRect(230,Hans2,width,Hans);
+
+        g.drawString("KG 0",20,280);
+        g.drawString("20", kg100m, 255);
+        g.drawString("40", kg100m,235);
+        g.drawString("60",kg100m,215);
+        g.drawString("80",kg100m,195);
+        g.drawString("100",kg100p,175);
+        g.drawString("120",kg100p,155);
+        g.drawString("140",kg100p,135);
+        g.drawString("160",kg100p,115);
+        g.drawString("180",kg100p,95);
+        g.drawString("200",kg100p,75);
+    }
 
 }
