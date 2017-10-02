@@ -21,7 +21,7 @@ public class H06Opdr03 extends Applet {
 
     }
     public void paint(Graphics g){
-        g.drawString("answer " + -c, 50, 50 );
+        g.drawString("1 + 2 = " + -c, 50, 50 );
     }
 
 
