@@ -7,30 +7,29 @@ dag en jaar gaan en de uitkomst van de berekening in het venster van de applet t
 import java.awt.*;
 import java.applet.*;
 
-public class H06Opdr02 extends Applet {
+public class H02 extends Applet {
 
-// secondes, een uur, een dag en een jaar.
-int seconds;
-int hour;
-int day;
-int year;
+// seconden, een uur, een dag en een jaar.
+private int uur;
+private int dag;
+private int jaar;
 
 public void init(){
-    // een minuut heeft 60 secondes.
-    seconds = 60;
+    // een minuut heeft 60 seconden.
+    int seconden = 60;
     // een uur heeft 60 minuten: 60 seconden * 60 minuten
-    hour = seconds * 60;
+    uur = seconden * 60;
     // een dag heeft 24 uur: 60 minuten * 24 uren
-    day = hour * 24;
+    dag = uur * 24;
     // een jaar heeft 365 dagen: 24 uren * 365 dagen (m.u.v. het schrikkeljaar)
-    year = day * 365; {
+    jaar = dag * 365; {
     }
 }
 public void paint(Graphics g){
     // som uitkomsten
-    g.drawString("seconds in an hour: " + hour, 50, 50);
-    g.drawString("seconds in a day: " + day, 50, 70);
-    g.drawString("seconds in a year: " + year, 50,90);
+    g.drawString("seconden in een uur: " + uur, 50, 50);
+    g.drawString("seconden in een dag: " + dag, 50, 70);
+    g.drawString("seconden in een jaar: " + jaar, 50,90);
 }
 }
 
