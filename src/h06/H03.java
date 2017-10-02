@@ -13,6 +13,7 @@ public class H03 extends Applet {
     public void init() {
         int a = 1;
         int b = 2;
+        //berekening
         c = -(a + b);
 
     }
