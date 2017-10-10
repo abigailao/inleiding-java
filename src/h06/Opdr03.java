@@ -1,6 +1,7 @@
 package h06;
 
-// Opdracht 6.3: Schrijf een applet waarin je twee ints met positieve waarden bij elkaar optelt en er een negatieve int uit komt.
+/* Opdracht 6.3: Schrijf een applet waarin je twee ints met positieve waarden bij elkaar optelt
+en er een negatieve int uit komt. */
 
 import java.awt.*;
 import java.applet.Applet;
