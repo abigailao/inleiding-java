@@ -5,7 +5,7 @@ package h06;
 import java.awt.*;
 import java.applet.Applet;
 
-public class H03 extends Applet {
+public class Opdr03 extends Applet {
 
     private int c;
 
