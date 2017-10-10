@@ -6,7 +6,8 @@ import java.awt.*;
 
 public class Opdr01 extends Applet{
 
-/**Opdracht 6.1: Met z'n vieren (Jan, Ali, Jeannette en jij) hebben jullie een karwei verricht en daarmee 113 euro verdiend.
+/*Opdracht 6.1: Met z'n vieren (Jan, Ali, Jeannette en jij) hebben jullie een karwei verricht
+en daarmee 113 euro verdiend.
 Schrijf een applet waarin je een berekening maakt om het geld zo eerlijk mogelijk te verdelen.
 In het venster van de applet komen de vier namen onder elkaar te staan met daarachter het bedrag dat een ieder krijgt.
  */
