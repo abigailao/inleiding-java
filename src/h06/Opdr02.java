@@ -7,7 +7,7 @@ dag en jaar gaan en de uitkomst van de berekening in het venster van de applet t
 import java.awt.*;
 import java.applet.*;
 
-public class H02 extends Applet {
+public class Opdr02 extends Applet {
 
 // seconden, een uur, een dag en een jaar.
 private int uur;
