@@ -13,7 +13,7 @@ import java.awt.event.*;
 public class Opdr02 extends Applet {
     Button knopm, knoppman, knopv, knoppvrouw;
     int m1, m2, v1, v2;
-    
+
     public void init() {
         knopm = new Button("aantal mannen");
         knopm.addActionListener(new Knop1listener());
