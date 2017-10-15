@@ -1,5 +1,11 @@
 package h08;
 
+/*Maak een rekenmachine in een applet. De rekenmachine bestaat uit twee tekstvakken en
+ vier knoppen. De gebruiker tikt in het eerste tekstvak een getal in en in het tweede
+ en klikt vervolgens op één van de knoppen om de berekening te laten uitvoeren.
+ De uitkomst wordt in het eerste tekstvak getoond en
+ het tweede tekstvak wordt leeggemaakt.*/
+
 import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
