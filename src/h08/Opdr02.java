@@ -36,8 +36,8 @@ public class Opdr02 extends Applet {
     public void paint(Graphics g) {
         g.drawString("aantal mannen: " + m1, 25, 150);
         g.drawString("aantal vrouwen: " + v1, 25, 175);
-        g.drawString("aantal potentiele mannen: " +m2, 25, 200);
-        g.drawString("aantal pontentiele vrouwen: " + v2, 25, 225);
+        g.drawString("aantal poteniële mannen: " +m2, 25, 200);
+        g.drawString("aantal poteniële vrouwen: " + v2, 25, 225);
     }
 
     class Knop1listener implements ActionListener {
