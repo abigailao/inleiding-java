@@ -1,5 +1,7 @@
 package h10;
 
+//Breid de applet uit opdracht 1 zo uit dat ook het laagste getal bijgehouden wordt.
+
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
