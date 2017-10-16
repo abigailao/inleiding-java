@@ -1,5 +1,9 @@
 package h10;
 
+/*Breid de applet zo uit, dat ook het jaar ingegeven kan worden en
+ aan de hand daarvan wordt bepaald of het om een schrikkeljaar gaat
+ om het juiste aantal dagen voor februari te kunnen vaststellen.*/
+
 import java.awt.*;
 import java.applet.Applet;
 import java.awt.event.ActionEvent;
@@ -22,9 +26,11 @@ public class Opdr04 extends Applet {
         jaar.addActionListener(new datumListener());
         add(jaar);
 
-        label1 = new Label("Type het maand en jaar nummer in. Druk daarna op enter");
+        //tekst
+        label1 = new Label("Type eerst de maand en dan het jaar nummer in. Druk nu op enter");
         add(label1);
 
+        //uitkomst
         maand2 = "";
         jaar2 = "";
 
@@ -38,8 +44,10 @@ public class Opdr04 extends Applet {
         public void actionPerformed(ActionEvent e) {
             a = maand.getText();
             s = jaar.getText();
+            //ophaal
             jaartal = Integer.parseInt(s);
             dag = Integer.parseInt( a);
+            //maand berekening
             switch(dag) {
                 case 1:
                     maand2 = "Januari: 31 dagen, ";
@@ -87,6 +95,7 @@ public class Opdr04 extends Applet {
                     maand2 = "U hebt een verkeerd nummer ingetikt ..!";
                     break;
             }
+            // jaar berekening
             if ( (jaartal % 4 == 0 && !(jaartal % 100 == 0)) ||
                     jaartal % 400 == 0 ) {
                 jaar2 = ""+ jaartal + " Jaar: is een schrikkeljaar";
