@@ -1,5 +1,7 @@
 package h10;
 
+//Schrijf een applet, waarin het maandnummer ingetikt wordt en de maandnaam en het aantal dagen wordt getoond.
+
 import java.awt.*;
 import java.applet.Applet;
 import java.awt.event.ActionEvent;
