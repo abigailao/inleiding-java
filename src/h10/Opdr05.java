@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 public class Opdr05 extends Applet{
 
-    double gem1, gem2, newcijfer, cijfer;
+    double gem1, gem2, newgetal, getal;
 
     Button knop1;
 
@@ -32,9 +32,9 @@ public class Opdr05 extends Applet{
 
         gem1 = 0;
 
-        newcijfer = 0;
+        newgetal = 0;
 
-        cijfer = 0;
+        getal = 0;
 
         Listen1 nc = new Listen1(); //Add a new number
 
@@ -76,7 +76,7 @@ public class Opdr05 extends Applet{
             g.drawString("U bent geslaagd.",100,100); }
 
 
-        g.drawString("uw gemiddelde is: " + (String.format("%.2f", Double.valueOf(gem2))), 100, 150);
+        g.drawString("uw gemiddelde is: " + (String.format ("%.2f", Double.valueOf(gem2))), 100, 150);
     }
 
 
@@ -85,13 +85,13 @@ public class Opdr05 extends Applet{
 
         public void actionPerformed(ActionEvent e) {
 
-            newcijfer = Double.parseDouble(vak1.getText());
+            newgetal = Double.parseDouble(vak1.getText());
 
             gem1++;
 
-            cijfer = cijfer + newcijfer;
+            getal = getal + newgetal;
 
-            gem2 = cijfer/gem1;
+            gem2 = getal/gem1;
 
             repaint();
         }
@@ -104,13 +104,13 @@ public class Opdr05 extends Applet{
 
         public void actionPerformed(ActionEvent e) {
 
-            newcijfer = 0;
+            newgetal = 0;
 
             gem1 = 0;
 
             gem2 = 0;
 
-            cijfer = 0;
+            getal = 0;
 
             repaint();
         }
