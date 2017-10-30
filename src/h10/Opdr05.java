@@ -1,5 +1,10 @@
 package h10;
 
+/*Schrijf een applet,
+waarin de gebruiker zijn cijfers kan invoeren en wordt getoond of het cijfer voldoende of onvoldoende is.
+Tevens wordt het gemiddelde bijgehouden.
+Zodra de gebruiker op de Ok-knop klikt, wordt getoond wat het gemiddelde is en of de leerling geslaagd is.*/
+
 import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.*;
@@ -7,51 +12,51 @@ import java.awt.event.*;
 
 
 public class Opdr05 extends Applet{
-    double gem1, gem2, newgetal, getal;
-    Button knop1, knop2;
-    TextField vak1;
+    double Gem1, Gem2, Newgetal, Getal;
+    Button Knop1, Knop2;
+    TextField Vak1;
 
 
 
     public void init() {
         setSize(400,200);
 
-        vak1 = new TextField("",10);
-        knop1 = new Button("Voeg een cijfer toe.");
-        knop2 = new Button("reset");
+        Vak1 = new TextField("",10);
+        Knop1 = new Button("Voeg een cijfer toe.");
+        Knop2 = new Button("reset");
 
-        gem1 = 0;
-        newgetal = 0;
-        getal = 0;
+        Gem1 = 0;
+        Newgetal = 0;
+        Getal = 0;
 
-        knop1.addActionListener(new Listen1());
-        knop2.addActionListener(new Listen2());
+        Knop1.addActionListener(new Listen1());
+        Knop2.addActionListener(new Listen2());
 
-        add(vak1);
-        add(knop1);
-        add(knop2);
+        add(Vak1);
+        add(Knop1);
+        add(Knop2);
     }
 
 
     public void paint(Graphics g) {
-        g.drawString("uw gemiddelde is: " + (String.format ("%.2f", Double.valueOf(gem2))), 100, 150);
+        g.drawString("uw gemiddelde is: " + (String.format ("%.2f", Double.valueOf(Gem2))), 100, 150);
 
-        if(gem1<0.01)
+        if(Gem1<0.01)
         {
             g.drawString("",100,100); }
 
 
-        else if(gem2<5.5)
+        else if(Gem2<5.5)
         {
             g.drawString("U bent gezakt.",100,100); }
 
 
-        if(gem2>10.1)
+        if(Gem2>10.1)
         {
             g.drawString("Voer correcte cijfers in.",100,200); }
 
 
-        else if(gem2>5.45 && gem2<10.1)
+        else if(Gem2>5.45 && Gem2<10.1)
         {
             g.drawString("U bent geslaagd.",100,100); }
     }
@@ -60,10 +65,10 @@ public class Opdr05 extends Applet{
     class Listen1 implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            newgetal = Double.parseDouble(vak1.getText());
-            gem1++;
-            getal = getal + newgetal;
-            gem2 = getal/gem1;
+            Newgetal = Double.parseDouble(Vak1.getText());
+            Gem1++;
+            Getal = Getal + Newgetal;
+            Gem2 = Getal/Gem1;
 
             repaint();
         }
@@ -72,10 +77,10 @@ public class Opdr05 extends Applet{
     class Listen2 implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            newgetal = 0;
-            gem1 = 0;
-            gem2 = 0;
-            getal = 0;
+            Newgetal = 0;
+            Gem1 = 0;
+            Gem2 = 0;
+            Getal = 0;
             repaint();
         }
     }
