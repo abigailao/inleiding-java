@@ -1,6 +1,11 @@
 package h10;
 
-// Voorbeeld 10.1
+/*Schrijf een applet in Java waarin een cijfer ingevoerd wordt en
+in het venster van de applet wordt getoond of het cijfer slecht, onvoldoende, matig, voldoende of goed is.
+Als er een cijfer wordt ingevoerd dat niet in de onderstaande rij voorkomt,
+dan moet er een waarschuwing getoond worden dat er een verkeerd cijfer is ingevoerd.
+De cijfers 1, 2 en 3 zijn slecht, het cijfer 4 is onvoldoende, het cijfer 5 is matig, de cijfers 6 en 7 zijn voldoende,
+de cijfers 8, 9 en 10 zijn goed.*/
 
 import java.awt.*;
 import java.applet.Applet;
@@ -8,49 +13,47 @@ import java.awt.event.*;
 
 
 public class PraktijkOpdracht extends Applet {
-    Label label;
-    TextField tekstvak;
-    String s, tekst;
-    int cijfer, newcijfer;
+    Label Label;
+    TextField Tekstvak;
+    String S, Tekst;
+    int Cijfer;
 
     public void init() {
-        label = new Label("Voer uw cijfer in: ");
+        Label = new Label("Voer uw cijfer in: ");
 
-        tekstvak = new TextField("", 20);
-        tekstvak.addActionListener( new TekstvakListener() );
-        tekst = "";
-        s = "";
+        Tekstvak = new TextField("", 20);
+        Tekstvak.addActionListener( new TekstvakListener() );
+        Tekst = "";
+        S = "";
 
-        newcijfer = 0;
-        cijfer = 0;
+        Cijfer = 0;
 
-        add(tekstvak);
-        add (label);
+        add(Tekstvak);
+        add (Label);
 
     }
 
     public void paint(Graphics g) {
-        g.drawString(tekst, 50, 60 );
+        g.drawString(Tekst, 50, 60 );
     }
 
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            s = tekstvak.getText();
-            cijfer = 0;
-            newcijfer = 0;
-            cijfer = Integer.parseInt(s);{
-                if (cijfer <= 3) {
-                    tekst = "slecht";
-                } else if (cijfer == 4) {
-                    tekst = "onvoldoende";
-                } if (cijfer == 5) {
-                    tekst = "matig";
-                } else if (cijfer == 6 || cijfer == 7) {
-                    tekst = "voldoende";
-                } if (cijfer >= 8 && cijfer <= 10) {
-                    tekst = "goed";
-                } else if (cijfer > 10) {
-                    tekst = "U hebt een verkeerd nummer ingetikt ..!";
+            S = Tekstvak.getText();
+            Cijfer = 0;
+            Cijfer = Integer.parseInt(S);{
+                if (Cijfer <= 3) {
+                    Tekst = "slecht";
+                } else if (Cijfer == 4) {
+                    Tekst = "onvoldoende";
+                } if (Cijfer == 5) {
+                    Tekst = "matig";
+                } else if (Cijfer == 6 || Cijfer == 7) {
+                    Tekst = "voldoende";
+                } if (Cijfer >= 8 && Cijfer <= 10) {
+                    Tekst = "goed";
+                } else if (Cijfer > 10) {
+                    Tekst = "U hebt een verkeerd nummer ingetikt ..!";
                 }
                 repaint();
             }
