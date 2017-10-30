@@ -8,67 +8,67 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Opdr03 extends Applet {
-    TextField tekstvak;
-    Label label;
-    String s, tekst;
-    int dag;
+    TextField Tekstvak;
+    Label Label;
+    String S, Tekst;
+    int Dag;
 
     public void init() {
-        tekstvak = new TextField("", 20);
-        label = new Label("Type het maand nummer en druk op enter");
-        tekstvak.addActionListener( new tekstvakListener());
-        tekst = "";
-        add(label);
-        add(tekstvak);
+        Tekstvak = new TextField("", 20);
+        Label = new Label("Type het maand nummer en druk op enter");
+        Tekstvak.addActionListener( new tekstvakListener());
+        Tekst = "";
+        add(Label);
+        add(Tekstvak);
     }
 
     public void paint(Graphics g) {
-        g.drawString(tekst, 80, 70 );
+        g.drawString(Tekst, 80, 70 );
     }
 
     class tekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            s = tekstvak.getText();
-            dag = Integer.parseInt( s);
-            switch(dag) {
+            S = Tekstvak.getText();
+            Dag = Integer.parseInt( S);
+            switch(Dag) {
                 case 1:
-                    tekst = "Januari: 31 dagen";
+                    Tekst = "Januari: 31 dagen";
                     break;
                 case 2:
-                    tekst = "Februari: 28 dagen";
+                    Tekst = "Februari: 28 dagen";
                     break;
                 case 3:
-                    tekst = "Maart: 31 dagen";
+                    Tekst = "Maart: 31 dagen";
                     break;
                 case 4:
-                    tekst = "April: 30 dagen";
+                    Tekst = "April: 30 dagen";
                     break;
                 case 5:
-                    tekst = "Mei: 31 dagen";
+                    Tekst = "Mei: 31 dagen";
                     break;
                 case 6:
-                    tekst = "Juni: 30 dagen";
+                    Tekst = "Juni: 30 dagen";
                     break;
                 case 7:
-                    tekst = "Juli: 31 dagen";
+                    Tekst = "Juli: 31 dagen";
                     break;
                 case 8:
-                    tekst = "Augustus: 31 dagen";
+                    Tekst = "Augustus: 31 dagen";
                     break;
                 case 9:
-                    tekst = "September: 30 dagen";
+                    Tekst = "September: 30 dagen";
                     break;
                 case 10:
-                    tekst = "Oktober: 31 dagen";
+                    Tekst = "Oktober: 31 dagen";
                     break;
                 case 11:
-                    tekst = "November: 30 dagen";
+                    Tekst = "November: 30 dagen";
                     break;
                 case 12:
-                    tekst = "December: 31 dagen";
+                    Tekst = "December: 31 dagen";
                     break;
                 default:
-                    tekst = "U hebt een verkeerd nummer ingetikt ..!";
+                    Tekst = "U hebt een verkeerd nummer ingetikt ..!";
                     break;
             }
             repaint();
